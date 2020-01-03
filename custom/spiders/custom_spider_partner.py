@@ -1,7 +1,7 @@
 import scrapy
 from ..items import TradeGoodsPartnerItem
 import threading
-from custom.datasource import DataSource
+from datasource import DataSource
 import distribute_setting as distribute_setting
 
 

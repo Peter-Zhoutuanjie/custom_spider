@@ -1,10 +1,9 @@
 import scrapy
 from ..items import TradeGoodsItem
 import threading
-from custom.datasource import DataSource
-from scrapy.spidermiddlewares.httperror import HttpError
-from twisted.internet.error import DNSLookupError
-from twisted.internet.error import TimeoutError, TCPTimedOutError
+from datasource import DataSource
+
+
 # from scrapy_selenium import SeleniumRequest
 
 

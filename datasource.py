@@ -44,3 +44,11 @@ class DataSource(object):
     def del_url_partner(self, id):
         self.cursor.execute("delete FROM `job_url_partner` where id = %s" % id)
         self.connect.commit()
+
+    def insertUrlsBatch(self,table,url_lst, year):
+        sql = "INSERT INTO `job_url_"+table+"` (`url`,`ie_type`,`year`) VALUES (%s, %s,'" + str(year) + "')"
+        try:
+            self.cursor.executemany(sql, url_lst)
+            self.connect.commit()
+        except Exception as e:
+            print(e)
